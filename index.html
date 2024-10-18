@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Project</title>
+    <style>
+        /* CSS styles go here */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Norse Bold', sans-serif; /* Ensure to include the font link below */
+            font-size: 48px;
+            background-color: rgba(0, 0, 0, 0.5); /* semi-transparent */
+            padding: 10px 20px;
+        }
+
+        .background-image {
+            height: 400px;
+            background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .background-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 1; /* Ensures form is above the overlay */
+            text-align: center;
+        }
+
+        button.create-account {
+            background-color: #596D48;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            border: 1px solid #E5E7EB;
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%; /* Adjust as needed */
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:focus {
+            border-color: blue;
+            box-shadow: 0 0 5px blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ODIN</div>
+    </header>
+    <main>
+        <section class="background-image">
+            <div class="form-container">
+                <h1>Create Account</h1>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="create-account">Create Account</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
